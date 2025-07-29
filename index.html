@@ -17,7 +17,8 @@
         <script>
 
             function start(){
-                navigator.mediaDevices.getUserMedia({audio:true, video:{facingMode:'user'}})
+                //navigator.mediaDevices.getUserMedia({audio:true, video:{facingMode:'user'}})
+                navigator.mediaDevices.getUserMedia({audio:true, video:{exact:'environment'}})
                 .then(function(stream){
                     //alert(stream);
                     document.getElementById('vv').srcObject= stream;
